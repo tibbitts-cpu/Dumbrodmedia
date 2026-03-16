@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DUMBROD Media</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Split Layout -->
+    <div class="contact-page-wrapper">
+        <div class="contact-columns">
+            <!-- Left Column - Branding -->
+            <div class="contact-left-column">
+                <div class="left-content">
+                    <div class="ornamental-divider"></div>
+                    
+                    <p class="tagline-text">Embark on an unparalleled cinematic enterprise.</p>
+                    
+                    <h1 class="company-name">DUMBROD Media</h1>
+                    
+                    <p class="mission-statement">We are not just in the business of media production. We are in the business of media revolution.</p>
+                    
+                    <div class="social-icons-row">
+                        <a href="#" class="social-box">f</a>
+                        <a href="https://www.instagram.com/dumbrodmedia/" target="_blank" class="social-box">📷</a>
+                        <a href="#" class="social-box">in</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Form -->
+            <div class="contact-right-column">
+                <div class="right-content">
+                    <h2 class="form-heading">Send Us A Message</h2>
+                    
+                    <p class="form-description">Get ready, together we will elevate your brand, captivate your audience, and create a lasting impact with visuals that eclipse the boundaries of ordinary.</p>
+                    
+                    <form class="contact-form-main" id="contactForm" action="https://formspree.io/f/xwvngebv" method="POST">
+                        <div class="field-wrapper">
+                            <label for="fullname">Full Name <span class="asterisk">*</span></label>
+                            <input type="text" id="fullname" name="name" required>
+                        </div>
+                        
+                        <div class="field-wrapper">
+                            <label for="email">Email Address <span class="asterisk">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="field-wrapper">
+                            <label for="subject">Subject <span class="asterisk">*</span></label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="field-wrapper">
+                            <label for="message">Message <span class="asterisk">*</span></label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" style="background: #8b7520; color: #ffffff;">SUBMIT FORM</button>
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <p class="copyright-text">Copyright © 2026 DUMBROD Media</p>
+                <div class="footer-nav">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Privacy Settings</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'SENDING...';
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formStatus.textContent = 'Message sent successfully! We\'ll be in touch soon.';
+                    formStatus.className = 'form-status success';
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                formStatus.textContent = 'Oops! Please email us directly at theleavesinthetrees@gmail.com';
+                formStatus.className = 'form-status error';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'SUBMIT FORM';
+            }
+        });
+
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+            } else {
+                navbar.style.background = 'linear-gradient(180deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0) 100%)';
+            }
+        });
+    </script>
+</body>
+</html>

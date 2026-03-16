@@ -1,0 +1,336 @@
+/* Contact Page Specific Styles */
+
+.contact-page-wrapper {
+    padding-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+    min-height: calc(100vh - 80px - 60px);
+}
+
+/* LEFT COLUMN - Branding with Gold Background */
+.contact-left-column {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+}
+
+.left-content {
+    max-width: 480px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Ornamental Divider */
+.ornamental-divider {
+    width: 100px;
+    height: 2px;
+    background: #ffffff;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.ornamental-divider::before,
+.ornamental-divider::after {
+    content: '◆';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.ornamental-divider::before {
+    left: -15px;
+}
+
+.ornamental-divider::after {
+    right: -15px;
+}
+
+.tagline-text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.company-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    color: var(--accent-color);
+}
+
+.mission-statement {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.social-icons-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-box {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-box:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+/* RIGHT COLUMN - Form with Light Gray Background */
+.contact-right-column {
+    background: #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+}
+
+.right-content {
+    max-width: 550px;
+    width: 100%;
+}
+
+.form-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.form-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555555;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* FORM FIELDS - Much Larger */
+.contact-form-main {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field-wrapper label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    text-align: left;
+}
+
+.asterisk {
+    color: #e74c3c;
+}
+
+.field-wrapper input {
+    height: 45px;
+    width: 100%;
+    padding: 0 18px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #333333;
+    transition: border-color 0.3s ease;
+}
+
+.field-wrapper textarea {
+    height: 140px;
+    width: 100%;
+    padding: 14px 18px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #333333;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.field-wrapper input:focus,
+.field-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--accent-darker);
+}
+
+/* Submit Button - Exact Match to Homepage "Start Your Story" Button */
+.submit-btn {
+    align-self: center;
+    display: inline-block;
+    padding: 18px 48px;
+    background: #8b7520 !important; /* Deep 24k gold - force override */
+    color: #ffffff !important;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: var(--accent-hover) !important; /* Lighter gold on hover */
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.form-status {
+    text-align: center;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-size: 14px;
+    display: none;
+}
+
+.form-status.success {
+    display: block;
+    background: rgba(76, 175, 80, 0.1);
+    color: #2e7d32;
+    border: 1px solid #4caf50;
+}
+
+.form-status.error {
+    display: block;
+    background: rgba(244, 67, 54, 0.1);
+    color: #c62828;
+    border: 1px solid #f44336;
+}
+
+/* FOOTER */
+.page-footer {
+    background: #333333;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-text {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-nav a {
+    font-size: 13px;
+    color: #5dade2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+    .contact-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-left-column,
+    .contact-right-column {
+        padding: 60px 40px;
+    }
+    
+    .company-name {
+        font-size: 38px;
+    }
+    
+    .form-heading {
+        font-size: 30px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-left-column,
+    .contact-right-column {
+        padding: 40px 25px;
+    }
+    
+    .company-name {
+        font-size: 32px;
+    }
+    
+    .form-heading {
+        font-size: 26px;
+    }
+    
+    .right-content {
+        max-width: 100%;
+    }
+}
