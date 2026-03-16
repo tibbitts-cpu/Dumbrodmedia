@@ -280,10 +280,10 @@ body {
 }
 
 .content-text .lead {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--text-color);
-    line-height: 1.6;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.8;
 }
 
 /* Beyond The Lens */
