@@ -7,9 +7,9 @@
 
 :root {
     --primary-color: #000000;
-    --accent-color: #0088cc; /* Hyperlink blue - unified across site */
-    --accent-darker: #0088cc; /* Hyperlink blue for buttons */
-    --accent-hover: #00b3e6; /* Lighter blue for hover states */
+    --accent-color: #2481cc; /* Telegram link blue - unified across site */
+    --accent-darker: #2481cc; /* Telegram link blue for buttons */
+    --accent-hover: #3390ec; /* Lighter blue for hover states */
     --text-color: #ffffff; /* White */
     --text-secondary: #ffffff; /* White for subtitles */
     --bg-dark: #000000;
