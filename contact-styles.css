@@ -200,7 +200,7 @@
     align-self: center;
     display: inline-block;
     padding: 18px 48px;
-    background: #8b7520 !important; /* Deep 24k gold - force override */
+    background: #1565a0 !important; /* Darker blue */
     color: #ffffff !important;
     border: none;
     border-radius: 50px;
