@@ -1246,8 +1246,7 @@ body {
 
 /* About Section Image */
 .about-image {
-    width: 100%;
-    max-width: 450px;
+    width: 375px;
     height: 375px;
     object-fit: cover;
     object-position: top; /* Crop from bottom, keep top (face/hat) */
