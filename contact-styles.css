@@ -70,7 +70,7 @@
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 40px;
-    color: var(--accent-color);
+    color: #ffffff; /* White */
 }
 
 .mission-statement {
