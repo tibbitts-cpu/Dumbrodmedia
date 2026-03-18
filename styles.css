@@ -395,6 +395,7 @@ body {
 .about {
     background: var(--bg-dark);
     text-align: center;
+    padding: 40px 0; /* Reduce padding for minimal content */
 }
 
 .about-content {
@@ -405,7 +406,7 @@ body {
 .about-tagline {
     font-size: 20px;
     color: var(--text-secondary);
-    margin-bottom: 60px;
+    margin-bottom: 0;
 }
 
 .emphasis.large {
