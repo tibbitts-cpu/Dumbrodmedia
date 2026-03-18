@@ -341,6 +341,7 @@ body {
 /* Services Section */
 .services {
     background: var(--bg-darker);
+    padding-bottom: 60px; /* Reduce bottom spacing */
 }
 
 .services-grid {
@@ -395,7 +396,7 @@ body {
 .about {
     background: var(--bg-dark);
     text-align: center;
-    padding: 40px 0; /* Reduce padding for minimal content */
+    padding: 20px 0; /* Minimal padding for compact layout */
 }
 
 .about-content {
@@ -425,6 +426,7 @@ body {
 .contact {
     background: var(--bg-darker);
     text-align: center;
+    padding-top: 60px; /* Reduce top spacing */
 }
 
 .contact-subtitle {
