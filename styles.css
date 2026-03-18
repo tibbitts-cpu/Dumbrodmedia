@@ -1204,3 +1204,41 @@ body {
         font-size: 1.25rem;
     }
 }
+
+/* Placeholder Video Cards */
+.placeholder-card {
+    cursor: default;
+}
+
+.placeholder-thumbnail {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.placeholder-content p {
+    margin-top: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.placeholder-card .video-title,
+.placeholder-card .video-description {
+    color: rgba(255, 255, 255, 0.5);
+}
