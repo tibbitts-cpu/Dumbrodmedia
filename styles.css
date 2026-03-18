@@ -398,7 +398,7 @@ body {
 .about {
     background: var(--bg-dark);
     text-align: center;
-    padding: 20px 0; /* Minimal padding for compact layout */
+    padding: 60px 0; /* Increased padding for content */
 }
 
 .about-content {
@@ -1242,4 +1242,18 @@ body {
 .placeholder-card .video-title,
 .placeholder-card .video-description {
     color: rgba(255, 255, 255, 0.5);
+}
+
+/* About Section Image */
+.about-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* About Section Text Alignment */
+.about .split-text {
+    text-align: left;
 }
